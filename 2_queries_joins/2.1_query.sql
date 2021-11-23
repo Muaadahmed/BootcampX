@@ -1,3 +1,4 @@
-SELECT sum(duration) 
+SELECT sum(assignment_submissions.duration) as total_duration
 FROM assignment_submissions
-WHERE assignment_submissions.student_id = 186;
+JOIN students ON students.id = student_id
+WHERE students.name = 'Ibrahim Schimmel';
